@@ -34,8 +34,10 @@ const allowedOrigins = process.env.CLIENT_URL === "*"
     ].filter(Boolean);
 
 const corsOptions = {
-  origin: allowedOrigins,
-  credentials: allowedOrigins === "*" ? false : true,
+  origin: function(origin, callback) {
+    callback(null, true);
+  },
+  credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
 
