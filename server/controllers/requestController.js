@@ -1,4 +1,4 @@
-const Request = require("../models/request");
+const Request = require("../models/Request");
 
 // @route   POST /api/requests
 // Student submits a new request

@@ -5,8 +5,8 @@ const {
   updateRequestStatus,
   addRemark,
   getAnalytics,
-} = require("../controllers/admincontroller");
-const { protect, adminOnly } = require("../middleware/authmiddleware");
+} = require("../controllers/adminController");
+const { protect, adminOnly } = require("../middleware/authMiddleware");
 
 router.get("/requests", protect, adminOnly, getAllRequests);
 router.put("/requests/:id/status", protect, adminOnly, updateRequestStatus);

@@ -1,6 +1,6 @@
 const { sendStatusUpdateEmail } = require("../utils/emailservice");
 
-const Request = require("../models/request");
+const Request = require("../models/Request");
 
 // @route   GET /api/admin/requests
 // Admin gets all requests with filters
@@ -48,7 +48,7 @@ const updateRequestStatus = async (req, res) => {
   await request.save();
 
   // Send email notification to student
-  const student = await require("../models/user").findById(request.student);
+  const student = await require("../models/User").findById(request.student);
   if (student?.email) {
     sendStatusUpdateEmail({
       to: student.email,
