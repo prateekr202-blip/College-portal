@@ -6,7 +6,7 @@ const {
   getRequestById,
   trackRequest,
 } = require("../controllers/requestController");
-const { protect } = require("../middleware/authMiddleware");
+const { protect } = require("../middleware/authmiddleware");
 const { upload } = require("../middleware/uploadMiddleware");
 
 router.post("/", protect, upload.array("documents", 5), submitRequest);

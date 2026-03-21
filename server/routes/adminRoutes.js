@@ -6,7 +6,7 @@ const {
   addRemark,
   getAnalytics,
 } = require("../controllers/adminController");
-const { protect, adminOnly } = require("../middleware/authMiddleware");
+const { protect, adminOnly } = require("../middleware/authmiddleware");
 
 router.get("/requests", protect, adminOnly, getAllRequests);
 router.put("/requests/:id/status", protect, adminOnly, updateRequestStatus);
