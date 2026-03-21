@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/user");
-const Request = require("../models/request");
+const User = require("../models/User");
+const Request = require("../models/Request");
 const { sendWelcomeEmail } = require("../utils/emailservice");
 
 const generateToken = (id) => {
