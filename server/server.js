@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-sockethandler(io);
+socketHandler(io);
 
 const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));
