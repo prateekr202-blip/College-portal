@@ -12,7 +12,7 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const requestRoutes = require("./routes/requestRoutes");
 const adminRoutes = require("./routes/adminRoutes");
-const socketHandler = require("./socket/socketHandler");
+const socketHandler = require("./socket/sockethandler");
 
 // Cloudinary config
 cloudinary.config({
@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-socketHandler(io);
+sockethandler(io);
 
 const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));
