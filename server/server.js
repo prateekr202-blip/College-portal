@@ -26,11 +26,21 @@ connectDB();
 const app = express();
 const httpServer = http.createServer(app);
 
+const allowedOrigins = process.env.CLIENT_URL === "*"
+  ? "*"
+  : [
+      "http://localhost:3000",
+      process.env.CLIENT_URL,
+    ].filter(Boolean);
+
+const corsOptions = {
+  origin: allowedOrigins,
+  credentials: allowedOrigins === "*" ? false : true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
+
 const io = new Server(httpServer, {
-  cors: {
-    origin: process.env.CLIENT_URL,
-    methods: ["GET", "POST"],
-  },
+  cors: corsOptions,
 });
 
 app.use((req, res, next) => {
@@ -38,7 +48,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({ origin: process.env.CLIENT_URL }));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
