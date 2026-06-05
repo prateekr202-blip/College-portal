@@ -81,8 +81,9 @@ CampusPortal/
 │       └── package.json
 │
 └── packages/
-Installation
-Clone Repository
+
+###Installation
+##Clone Repository
 git clone <repository-url>
 cd CampusPortal
 Install Dependencies
@@ -157,5 +158,8 @@ License
 This project is licensed under the MIT License.
 
 Author
+
+Prateek Rai
+
 
 Prateek Rai
