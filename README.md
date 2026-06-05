@@ -59,31 +59,8 @@ Campus administrative tasks are often handled manually, resulting in delays, lac
 - CORS
 - Dotenv
 
-## Project Structure
-
-```text
-CampusPortal/
-│
-├── apps/
-│   ├── web/
-│   │   ├── src/
-│   │   ├── public/
-│   │   └── package.json
-│   │
-│   └── server/
-│       ├── src/
-│       │   ├── controllers/
-│       │   ├── middleware/
-│       │   ├── models/
-│       │   ├── routes/
-│       │   ├── utils/
-│       │   └── index.js
-│       └── package.json
-│
-└── packages/
-
-###Installation
-##Clone Repository
+  Installation
+Clone Repository
 git clone <repository-url>
 cd CampusPortal
 Install Dependencies
@@ -161,5 +138,26 @@ Author
 
 Prateek Rai
 
+## Project Structure
 
-Prateek Rai
+```text
+CampusPortal/
+│
+├── apps/
+│   ├── web/
+│   │   ├── src/
+│   │   ├── public/
+│   │   └── package.json
+│   │
+│   └── server/
+│       ├── src/
+│       │   ├── controllers/
+│       │   ├── middleware/
+│       │   ├── models/
+│       │   ├── routes/
+│       │   ├── utils/
+│       │   └── index.js
+│       └── package.json
+│
+└── packages/
+
