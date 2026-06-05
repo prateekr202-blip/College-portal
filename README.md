@@ -59,82 +59,89 @@ Campus administrative tasks are often handled manually, resulting in delays, lac
 - CORS
 - Dotenv
 
-  Installation
-Clone Repository
-git clone <repository-url>
-cd CampusPortal
-Install Dependencies
-npm install
-Backend Setup
+## Installation
+### Clone Repository
+- git clone <repository-url>
+- cd CampusPortal
+- Install Dependencies
+- npm install
+  
+## Backend Setup
 
-Navigate to server:
+### Navigate to server:
 
-cd apps/server
+- cd apps/server
+- Create a .env file:
+- PORT=5000
+- MONGODB_URI=your_mongodb_connection_string
+- JWT_SECRET=your_secret_key
+- Install dependencies:
+- npm install
+  
+### Run backend:
+- npm run dev
+  
+## Frontend Setup
 
-Create a .env file:
+### Navigate to frontend:
 
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+- cd apps/web
+- Install dependencies:
+- npm install
 
-Install dependencies:
+###  Run frontend:
 
-npm install
+- npm run dev
 
-Run backend:
+## API Modules
 
-npm run dev
-Frontend Setup
+### Authentication
 
-Navigate to frontend:
+- Register User
+- Login User
+- JWT Token Validation
+  
+### Requests
 
-cd apps/web
+- Create Request
+- View Requests
+- Update Request Status
+- Delete Request
+  
+### Admin
 
-Install dependencies:
+- Manage Requests
+- View Analytics
+- User Management
+  
+## Future Enhancements
 
-npm install
+- Email Notifications
+- Real-time Updates using WebSockets
+- AI-powered Student Assistant
+- Analytics Dashboard
+- Multi-role Administration
+- Mobile Application
+- Advanced Reporting System
+- Automated Document Verification
+  
+## Security Measures
 
-Run frontend:
+- Password Hashing with bcrypt
+- JWT-based Authentication
+- Secure HTTP Headers via Helmet
+- Input Validation
+- Environment Variable Protection
 
-npm run dev
-API Modules
-Authentication
-Register User
-Login User
-JWT Token Validation
-Requests
-Create Request
-View Requests
-Update Request Status
-Delete Request
-Admin
-Manage Requests
-View Analytics
-User Management
-Future Enhancements
-Email Notifications
-Real-time Updates using WebSockets
-AI-powered Student Assistant
-Analytics Dashboard
-Multi-role Administration
-Mobile Application
-Advanced Reporting System
-Automated Document Verification
-Security Measures
-Password Hashing with bcrypt
-JWT-based Authentication
-Secure HTTP Headers via Helmet
-Input Validation
-Environment Variable Protection
-Contributing
+## Contributing
 
 Contributions are welcome. Feel free to fork the repository and submit pull requests.
 
-License
+## License
 
 This project is licensed under the MIT License.
 
-Author
+# Author
 
 Prateek Rai
 
